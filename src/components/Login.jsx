@@ -24,7 +24,7 @@ const Login = () => {
       );
       toast.success(res.data.message || 'Login successful!');
       localStorage.setItem('token', res.data.token);
-      setTimeout(() => navigate('/home'), 1500);
+      setTimeout(() => navigate('/'), 1500);
     } catch (error) {
       toast.error(error.response?.data?.message || 'Login failed');
     }
